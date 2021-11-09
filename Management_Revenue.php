@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                 }
     ?>
     <div class="form-group">
-                <label for="" class="col-sm-2 control-label">Product  branch(*): </label>
+                <label for="" class="col-sm-2 control-label">Choose  branch to statistic </label>
                 <div class="col-sm-5">
                     <?php bind_branch_List($conn); ?>
                 </div>
