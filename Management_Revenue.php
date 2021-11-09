@@ -4,7 +4,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
     echo '<meta http-equiv="refresh" content="0;URL=index.php">';
 } else {
 ?>
-    <h1>Orders Management</h1>
+    <h1>Management Revenue</h1>
     <!-- Bootstrap -->
     <div class="form-group">
                 <label for="" class="col-sm-2 control-label">Product  branch(*): </label>
@@ -12,7 +12,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                     <?php bind_branch_List($conn); ?>
                 </div>
     </div>
-    
+
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
