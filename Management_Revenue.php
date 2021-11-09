@@ -47,7 +47,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                 <?php
                 include_once("Connection.php");
                 if (isset($_POST["btnStatistic"])) {
-                    $branch = ["BranchList"];
+                    $branch = $_POST['BranchList'];
                 // $result = pg_query($conn, "SELECT orderid, orderdate, deliverydate, deliveryloca, username, totalprice, b.paymentname
                 // From orders a, payment b WHERE a.paymentid=b.paymentid") or die(pg_errormessage($conn));
                 $result = pg_query($conn,"SELECT a.proid, proname, branchname, qty, totalprice FROM product as a, branch as b, orders as c, orderdetail as d
