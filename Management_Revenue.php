@@ -25,7 +25,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                 <div class="col-sm-5">
                     <?php bind_branch_List($conn); ?>
                 </div>
-                <input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Statistic" />
+                <input type="submit" class="btn btn-primary" name="btnStatistic" id="btnStatistic" value="Statistic" />
     </div>
     </p>
     </p>
@@ -36,31 +36,31 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
         <table id="tablecategory" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th><strong>Order ID</strong></th>
-                    <th><strong>Order Date</strong></th>
-                    <th><strong>Delivery Date</strong></th>
-                    <th><strong>Delivery Location</strong></th>
-                    <th><strong>Username</strong></th>
+                    <th><strong>Product ID</strong></th>
+                    <th><strong>Product Name</strong></th>
+                    <th><strong>Branch Name</strong></th>
+                    <th><strong>Quality</strong></th>
                     <th><strong>Total Price</strong></th>
-                    <th><strong>Payment</strong></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 include_once("Connection.php");
-                $result = pg_query($conn, "SELECT orderid, orderdate, deliverydate, deliveryloca, username, totalprice, b.paymentname
-                From orders a, payment b WHERE a.paymentid=b.paymentid ") or die(pg_errormessage($conn));
+                if (isset($_POST["btnStatistic"])) {
+                    $branch = ["BranchList"];
+                // $result = pg_query($conn, "SELECT orderid, orderdate, deliverydate, deliveryloca, username, totalprice, b.paymentname
+                // From orders a, payment b WHERE a.paymentid=b.paymentid") or die(pg_errormessage($conn));
+                $result = pg_query($conn,"SELECT a.proid, proname, branchname, qty, totalprice FROM product as a, branch as b, orders as c, orderdetail as d
+                WHERE d.branchid=b.branchid and a.proid = d.proid and c.orderid = d.orderid and d.branchid ='$branch'") or die(pg_errormessage($conn));
                 while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
                 ?>
                     <tr>
-                        <td><?php echo $row["orderid"]; ?></td>
-                        <td><?php echo $row["orderdate"] ?></td>
-                        <td><?php echo $row["deliverydate"] ?></td>
-                        <td><?php echo $row["deliveryloca"]; ?></td>
-                        <td><?php echo $row["username"] ?></td>
+                        <td><?php echo $row["proid"]; ?></td>
+                        <td><?php echo $row["proname"] ?></td>
+                        <td><?php echo $row["branchname"] ?></td>
+                        <td><?php echo $row["qty"]; ?></td>
                         <td><?php echo "$";
                             echo $row["totalprice"] ?></td>
-                        <td><?php echo $row["paymentname"] ?></td>
                     </tr>
                 <?php
                 $total += $row['totalprice'];
@@ -79,5 +79,6 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
         </table>
     </form>
 <?php
+}
 }
 ?>
