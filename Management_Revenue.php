@@ -6,6 +6,20 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
 ?>
     <h1>Management Revenue</h1>
     <!-- Bootstrap -->
+    <?php
+                include_once("Connection.php");
+                function bind_branch_List($conn)
+                {
+                    $sqlstring = "SELECT branchid, branchname FROM branch";
+                    $result = pg_query($conn, $sqlstring);
+                    echo "<select name='BranchList' class='form-control'>
+                    <option value='0'>Chose Branch</option>";
+                    while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
+                        echo "<option value='" . $row['branchid'] . "'>" . $row['branchname'] . "</option>";
+                    }
+                    echo "</select>";
+                }
+    ?>
     <div class="form-group">
                 <label for="" class="col-sm-2 control-label">Product  branch(*): </label>
                 <div class="col-sm-10">
