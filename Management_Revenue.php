@@ -25,8 +25,10 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                 <div class="col-sm-5">
                     <?php bind_branch_List($conn); ?>
                 </div>
+                <input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Statistic" />
     </div>
-
+    </p>
+    </p>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
