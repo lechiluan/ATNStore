@@ -65,6 +65,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                 <?php
                 $total += $row['totalprice'];
                 }
+            }
                 ?>
                 <tr>
                     <td colspan="5" align="right">
@@ -79,6 +80,5 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
         </table>
     </form>
 <?php
-}
 }
 ?>
