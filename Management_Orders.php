@@ -6,6 +6,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
 ?>
     <h1>Orders Management</h1>
     <!-- Bootstrap -->
+    
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">

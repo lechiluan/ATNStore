@@ -6,6 +6,13 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
 ?>
     <h1>Orders Management</h1>
     <!-- Bootstrap -->
+    <div class="form-group">
+                <label for="" class="col-sm-2 control-label">Product  branch(*): </label>
+                <div class="col-sm-10">
+                    <?php bind_branch_List($conn); ?>
+                </div>
+    </div>
+    
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,6 +32,17 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
             <tbody>
                 <?php
                 include_once("Connection.php");
+                function bind_branch_List($conn)
+                {
+                    $sqlstring = "SELECT branchid, branchname FROM branch";
+                    $result = pg_query($conn, $sqlstring);
+                    echo "<select name='BranchList' class='form-control'>
+                    <option value='0'>Chose Branch</option>";
+                    while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
+                        echo "<option value='" . $row['branchid'] . "'>" . $row['branchname'] . "</option>";
+                    }
+                    echo "</select>";
+                }
                 $result = pg_query($conn, "SELECT orderid, orderdate, deliverydate, deliveryloca, username, totalprice, b.paymentname
                 From orders a, payment b WHERE a.paymentid=b.paymentid ") or die(pg_errormessage($conn));
                 while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
