@@ -72,13 +72,16 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
         </tbody>
     </table>
 </form>
-<div class="form-group">
+<form>
+    <div class="form-group">
     <label for="" class="col-sm-2 control-label">Choose branch to statistic </label>
     <div class="col-sm-5">
         <?php bind_branch_List($conn); ?>
     </div>
     <input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Statistic"/>
 </div>
+</form>
+
 <?php
 }
 ?>
