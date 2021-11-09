@@ -61,7 +61,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
             }
                 ?>
             <tr>
-                <td colspan="5" align="right">
+                <td colspan="4" align="right">
                     <h3>TOTAL REVENUE</h3>
                 </td>
                 <td>
