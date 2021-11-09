@@ -15,7 +15,6 @@
 <script src="js/dataTables.bootstrap.min.js"></script>
 
 <?php 
-
 	if (isset($_POST['btnSummit'])) 
 	{
 	  if($_POST['txtEmail']!="" && $_POST['txtMessage']!="")

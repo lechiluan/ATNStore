@@ -20,13 +20,6 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                     echo "</select>";
                 }
     ?>
-<div class="form-group">
-    <label for="" class="col-sm-2 control-label">Choose branch to statistic </label>
-    <div class="col-sm-5">
-        <?php bind_branch_List($conn); ?>
-    </div>
-    <input type="submit" class="btn btn-primary" name="btnStatistic" id="btnStatistic" value="Statistic" />
-</div>
 </p>
 </p>
 <link rel="stylesheet" type="text/css" href="style.css" />
@@ -46,9 +39,8 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
         <tbody>
             <?php
                 include_once("Connection.php");
-                if (isset($_POST["btnStatistic"])) {
+                if (isset($_POST["btnAdd"])) {
                     $branch = $_POST['BranchList'];
-                    echo $branch;
                 // $result = pg_query($conn, "SELECT orderid, orderdate, deliverydate, deliveryloca, username, totalprice, b.paymentname
                 // From orders a, payment b WHERE a.paymentid=b.paymentid") or die(pg_errormessage($conn));
                 $result = pg_query($conn,"SELECT a.proid, proname, branchname, qty, totalprice FROM product as a, branch as b, orders as c, orderdetail as d
@@ -80,6 +72,13 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
         </tbody>
     </table>
 </form>
+<div class="form-group">
+    <label for="" class="col-sm-2 control-label">Choose branch to statistic </label>
+    <div class="col-sm-5">
+        <?php bind_branch_List($conn); ?>
+    </div>
+    <input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Statistic"/>
+</div>
 <?php
 }
 ?>
