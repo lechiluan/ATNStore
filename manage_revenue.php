@@ -20,7 +20,7 @@
             <div class="col-sm-10">
                 <?php bind_branch_List($conn); ?>
             </div>
-            <div class="form-group">
+            <<div class="container">>
                 <div class="col-sm-2">
                     <label>Month:</label>
                 </div>
@@ -41,7 +41,7 @@
                         <option value='12'>December</option>
                     </select>
                 </div>
-            </div>
+            </>
             <button type="submit" class="btn btn-primary" name="btnView" id="btnView">View</button>
             <button type="button" class="btn btn-danger" name="" id=""
                 onclick="window.location='index.php'">Cancel</button>
@@ -106,7 +106,7 @@
                 <td><?php echo $row['branchname']; ?></td>
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['proname']; ?></td>
-                <td align='center'><img src="product_image/<?php echo $row['proimage']?>" border='0' width="50"
+                <td align='center'><img src="product_imgs/<?php echo $row['proimage']?>" border='0' width="50"
                         height="50" /></td>
                 <td><?php echo $row['qty']; ?></td>
                 <td>$ <?php echo number_format($row['totalprice']); ?></td>
