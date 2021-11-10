@@ -125,14 +125,14 @@
         ?>
             <tr>
                 <td class="actions" colspan="6">
-                    <h4 align="center"><b>Total</b></h4>
+                    <h4 align="center"><b>TOTAL</b></h4>
                 </td>
 
                 <td>
-                    <h4><?php echo Number_format($sumquantity);?></h4>
+                    <h3 class="price"><?php echo Number_format($sumquantity);?></h3>
                 </td>
                 <td>
-                    <h4>$ <?php echo Number_format($sumTotal);?></h4>
+                    <h3 class="price">$ <?php echo Number_format($sumTotal);?></h3>
                 </td>
             </tr>
         </tbody>
