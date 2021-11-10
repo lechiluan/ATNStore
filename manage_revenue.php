@@ -5,15 +5,14 @@ function bind_Store_List($conn) {
 			echo "<SELECT name='StoreList' class='form-control'>
 				<option value='0'>Choose branch</option>";
 				while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
-					echo "<option value='".$row['branchid']."'>".$row['branchname']."</option>";
-				}
-			echo "</select>";	
+                    echo "<option value='" . $row['branchid'] . "'>" . $row['branchname'] . "</option>";
+                }
+                echo "</select>";	
 			}
 ?>
 <div class="container">
-<h1 align='center'>Revenue Management</h1>
+<h1>Revenue Management by month</h1>
   <form id="frmProduct" name="frmProduct" method="POST" enctype="multipart/form-data" class="form-horizontal" role="form">
-    
     <div class="form-group">
       <label>Store:</label>
       <?php bind_Store_List($conn); ?>
