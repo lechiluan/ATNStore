@@ -5,7 +5,7 @@ function bind_Store_List($conn) {
 			echo "<SELECT name='StoreList' class='form-control'>
 				<option value='0'>Choose branch</option>";
 				while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
-					echo "<option value='".$row['branchid']."'>".$row['branchname']." - ".$row['address']."</option>";
+					echo "<option value='".$row['branchid']."'>".$row['branchname']."</option>";
 				}
 			echo "</select>";	
 			}
@@ -81,7 +81,7 @@ function bind_Store_List($conn) {
                 else{
 
                     $No=1;
-                    $result = pg_query($conn, "SELECT b.branchid, branchname, address, proname, proimage, quantity, totalprice, proqty 
+                    $result = pg_query($conn, "SELECT b.branchid, branchname, address, proname, proimage, qty, totalprice, proqty 
                                                 from product a, branch b, orders c, orderdetail d 
                                                 where a.branchid=b.branchid and a.proid = d.proid and c.orderid = d.orderid 
                                                     and date_part('month', orderdate ) = '$month' and b.branchid = '$store'");
@@ -100,7 +100,7 @@ function bind_Store_List($conn) {
             <td ><?php echo $row['address']; ?></td>
             <td><?php echo $row['proname']; ?></td>
             <td align='center'><img src="product_image/<?php echo $row['proimage']?>" border='0' width="50" height="50" /></td>
-            <td><?php echo $row['quantity']; ?></td>
+            <td><?php echo $row['qty']; ?></td>
             <td>$ <?php echo number_format($row['totalprice']); ?></td>
             <td><?php echo $row['proqty']; ?></td>
         </tr>
