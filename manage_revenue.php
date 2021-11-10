@@ -125,11 +125,8 @@
     }
         ?>
             <tr>
-                <td class="actions" colspan="6">
-                    <h4 align="center"><b>TOTAL</b></h4>
-                </td>
-                <td>
-                    <h3 class="price"><b><?php echo Number_format($sumquantity);?></b></h3>
+                <td class="actions" colspan="7">
+                    <h4 align="right"><b>TOTAL</b></h4>
                 </td>
                 <td>
                     <h3 class="price"><b>$ <?php echo Number_format($sumTotal);?></b></h3>
