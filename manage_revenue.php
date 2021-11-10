@@ -20,27 +20,23 @@
             <div class="col-sm-10">
                 <?php bind_branch_List($conn); ?>
             </div>
-            <div class="container">
-                <div class="col-sm-2">
-                    <label>Month:</label>
-                </div>
-                <div class="col-sm-10">
-                    <select name="month" class='form-control'>
-                        <option value='0'>Choose month</option>
-                        <option value='1'>January</option>
-                        <option value='2'>February</option>
-                        <option value='3'>March</option>
-                        <option value='4'>April</option>
-                        <option value='5'>May</option>
-                        <option value='6'>June</option>
-                        <option value='7'>July</option>
-                        <option value='8'>August</option>
-                        <option value='9'>September</option>
-                        <option value='10'>October</option>
-                        <option value='11'>November</option>
-                        <option value='12'>December</option>
-                    </select>
-                </div>
+            <label>Month:</label>
+            <div class="col-sm-10">
+                <select name="month" class='form-control'>
+                    <option value='0'>Choose month</option>
+                    <option value='1'>January</option>
+                    <option value='2'>February</option>
+                    <option value='3'>March</option>
+                    <option value='4'>April</option>
+                    <option value='5'>May</option>
+                    <option value='6'>June</option>
+                    <option value='7'>July</option>
+                    <option value='8'>August</option>
+                    <option value='9'>September</option>
+                    <option value='10'>October</option>
+                    <option value='11'>November</option>
+                    <option value='12'>December</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-primary" name="btnView" id="btnView">Statistic</button>
             <button type="button" class="btn btn-danger" name="" id=""
