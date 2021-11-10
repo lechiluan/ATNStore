@@ -1,9 +1,9 @@
 <?php
 function bind_Store_List($conn) {
-			$sqlstring = "SELECT branchid, branchid, address from store";
+			$sqlstring = "SELECT branchid, branchid, address from branch";
 			$result = pg_query($conn, $sqlstring);
 			echo "<SELECT name='StoreList' class='form-control'>
-				<option value='0'>Choose store</option>";
+				<option value='0'>Choose branch</option>";
 				while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
 					echo "<option value='".$row['branchid']."'>".$row['branchname']." - ".$row['address']."</option>";
 				}
