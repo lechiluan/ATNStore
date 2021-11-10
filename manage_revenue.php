@@ -42,12 +42,13 @@
             </div>
         </div>
         <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+            <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-primary" name="btnView" id="btnView">Statistic</button>
-                    <input type="button" class="btn btn-primary" name="btnIgnore" id="btnIgnore" value="Ignore" onclick="window.location='index.php'" />
+                <input type="button" class="btn btn-primary" name="btnIgnore" id="btnIgnore" value="Ignore"
+                    onclick="window.location='index.php'" />
 
-                </div>
             </div>
+        </div>
     </form>
 </div>
 
@@ -127,17 +128,14 @@
                 <td class="actions" colspan="6">
                     <h4 align="center"><b>TOTAL</b></h4>
                 </td>
-
                 <td>
-                    <h3 class="price"><?php echo Number_format($sumquantity);?></h3>
+                    <h3 class="price"><b><?php echo Number_format($sumquantity);?></b></h3>
                 </td>
                 <td>
-                    <h3 class="price">$ <?php echo Number_format($sumTotal);?></h3>
+                    <h3 class="price"><b>$ <?php echo Number_format($sumTotal);?></b></h3>
                 </td>
             </tr>
         </tbody>
-
     </table>
-
 </form>
 </body>
