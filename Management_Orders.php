@@ -40,19 +40,6 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                             echo $row["totalprice"] ?></td>
                         <td><?php echo $row["paymentname"] ?></td>
                     </tr>
-                <?php
-                $total += $row['totalprice'];
-                }
-                ?>
-                <tr>
-                    <td colspan="5" align="right">
-                        <h3>TOTAL REVENUE</h3>
-                    </td>
-                    <td>
-                        <h3 class="price"><b>$<?php echo Number_format($total); ?></b></h3>
-                    </td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
     </form>
