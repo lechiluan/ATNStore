@@ -41,8 +41,13 @@
                 </select>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" name="btnView" id="btnView">Statistic</button>
-        <button type="button" class="btn btn-danger" name="" id="" onclick="window.location='index.php'">Cancel</button>
+        <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" name="btnView" id="btnView">Statistic</button>
+                    <input type="button" class="btn btn-primary" name="btnIgnore" id="btnIgnore" value="Ignore" onclick="window.location='index.php'" />
+
+                </div>
+            </div>
     </form>
 </div>
 
