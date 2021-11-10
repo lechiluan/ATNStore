@@ -101,7 +101,6 @@
                         exit();
                     }
                     while($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
-                        $sumquantity += $row['quantity'];
                         $sumTotal += $row['totalprice'];
         ?>
             <tr>
@@ -129,7 +128,7 @@
                     <h3>TOTAL REVENUE</h3>
                 </td>
                 <td>
-                    <h3 class="price"><b>$<?php echo Number_format($total); ?></b></h3>
+                    <h3 class="price"><b>$<?php echo Number_format($sumTotal); ?></b></h3>
                 </td>
                 <td></td>
             </tr>
