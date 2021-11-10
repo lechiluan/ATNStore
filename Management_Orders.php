@@ -40,6 +40,9 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                             echo $row["totalprice"] ?></td>
                         <td><?php echo $row["paymentname"] ?></td>
                     </tr>
+                <?php
+                }
+                ?>
             </tbody>
         </table>
     </form>
