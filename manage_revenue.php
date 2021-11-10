@@ -42,7 +42,7 @@
                     </select>
                 </div>
             </>
-            <button type="submit" class="btn btn-primary" name="btnView" id="btnView">View</button>
+            <button type="submit" class="btn btn-primary" name="btnView" id="btnView">Statistic</button>
             <button type="button" class="btn btn-danger" name="" id=""
                 onclick="window.location='index.php'">Cancel</button>
     </form>
