@@ -23,7 +23,6 @@
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label">Choose Month: </label>
                 <div class="col-sm-10">
-                <label>Month:</label>
                     <select name="month" class='form-control'>
                         <option value='0'>Choose month</option>
                         <option value='1'>January</option>
