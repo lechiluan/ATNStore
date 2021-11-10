@@ -1,21 +1,23 @@
 <?php
-function bind_Store_List($conn) {
-			$sqlstring = "SELECT branchid, branchid, address from branch";
-			$result = pg_query($conn, $sqlstring);
-			echo "<SELECT name='StoreList' class='form-control'>
-				<option value='0'>Choose branch</option>";
-				while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
-                    echo "<option value='" . $row['branchid'] . "'>" . $row['branchname'] . "</option>";
+                function bind_branch_List($conn)
+                {
+                    $sqlstring = "SELECT branchid, branchname FROM branch";
+                    $result = pg_query($conn, $sqlstring);
+                    echo "<select name='BranchList' class='form-control'>
+                    <option value='0'>Chose Branch</option>";
+                    while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
+                        echo "<option value='" . $row['branchid'] . "'>" . $row['branchname'] . "</option>";
+                    }
+                    echo "</select>";
                 }
-                echo "</select>";	
-			}
 ?>
 <div class="container">
 <h1>Revenue Management by month</h1>
   <form id="frmProduct" name="frmProduct" method="POST" enctype="multipart/form-data" class="form-horizontal" role="form">
-    <div class="form-group">
-      <label>Store:</label>
-      <?php bind_Store_List($conn); ?>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Choose branch to statistic </label>
+    <div class="col-sm-5">
+        <?php bind_branch_List($conn); ?>
     </div>
     <div class="form-group">
       <label>Month:</label>
