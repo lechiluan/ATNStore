@@ -88,7 +88,7 @@
                 else{
 
                     $No=1;
-                    $result = pg_query($conn, "SELECT b.branchid, branchname, address, proname, proimage, qty, totalprice, proqty 
+                    $result = pg_query($conn, "SELECT b.branchid, branchname, address, proname, a.proimage, qty, totalprice, proqty 
                                                 from product a, branch b, orders c, orderdetail d 
                                                 where a.branchid=b.branchid and a.proid = d.proid and c.orderid = d.orderid 
                                                     and date_part('month', orderdate ) = '$month' and b.branchid = '$store'");
