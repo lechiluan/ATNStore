@@ -20,11 +20,11 @@
             <div class="col-sm-10">
                 <?php bind_branch_List($conn); ?>
             </div>
-            <<div class="container">>
+            <div class="container">
                 <div class="col-sm-2">
                     <label>Month:</label>
                 </div>
-                <div class="col-sm-10">>
+                <div class="col-sm-10">
                     <select name="month" class='form-control'>
                         <option value='0'>Choose month</option>
                         <option value='1'>January</option>
@@ -41,7 +41,7 @@
                         <option value='12'>December</option>
                     </select>
                 </div>
-            </>
+            </div>
             <button type="submit" class="btn btn-primary" name="btnView" id="btnView">Statistic</button>
             <button type="button" class="btn btn-danger" name="" id=""
                 onclick="window.location='index.php'">Cancel</button>
@@ -106,8 +106,9 @@
                 <td><?php echo $row['branchname']; ?></td>
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['proname']; ?></td>
-                <td align='center'><img src="product_imgs/<?php echo $row['proimage']?>" border='0' width="50"
-                        height="50" /></td>
+                <td align='center' class='cotNutChucNang'>
+                    <img src='product-imgs/<?php echo $row['proimage']?>' border='0' width="50" height="50" />
+                </td>
                 <td><?php echo $row['qty']; ?></td>
                 <td>$ <?php echo number_format($row['totalprice']); ?></td>
                 <td><?php echo $row['proqty']; ?></td>
