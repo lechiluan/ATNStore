@@ -1,11 +1,11 @@
 <?php
 function bind_Store_List($conn) {
-			$sqlstring = "SELECT store_id, store_name, district, detail_address from store";
+			$sqlstring = "SELECT branchid, branchid, address from store";
 			$result = pg_query($conn, $sqlstring);
 			echo "<SELECT name='StoreList' class='form-control'>
 				<option value='0'>Choose store</option>";
 				while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
-					echo "<option value='".$row['store_id']."'>".$row['store_name']." - ".$row['district']." - ".$row['detail_address']."</option>";
+					echo "<option value='".$row['branchid']."'>".$row['branchname']." - ".$row['address']."</option>";
 				}
 			echo "</select>";	
 			}
@@ -49,15 +49,14 @@ function bind_Store_List($conn) {
         <thead>
             <tr>
                 <th><strong>No.</strong></th>
-                <th><strong>Store ID</strong></th>
-                <th><strong>Store name</strong></th>
-                <th><strong>Detail Address</strong></th>
+                <th><strong>Branch ID</strong></th>
+                <th><strong>Branch name</strong></th>
+                <th><strong>Branch Address</strong></th>
                 <th><strong>Product</strong></th>
                 <th><strong>Image</strong></th>
                 <th><strong>Quantity</strong></th>
                 <th><strong>Total Price</strong></th>
                 <th><strong>Left in stock</strong></th>
-
                <!-- <th><strong>Description</strong></th>-->
                 <!--<th><strong>Category ID</strong></th>
                 <th><strong>Store</strong></th>
@@ -82,10 +81,10 @@ function bind_Store_List($conn) {
                 else{
 
                     $No=1;
-                    $result = pg_query($conn, "SELECT b.store_id, store_name, detail_address, pro_name, image, quantity, totalprice, pro_qty 
-                                                from product a, store b, orders c, orderdetails d 
-                                                where a.store_id=b.store_id and a.pro_id = d.pro_id and c.order_id = d.order_id 
-                                                    and date_part('month', order_date ) = '$month' and b.store_id = '$store'");
+                    $result = pg_query($conn, "SELECT b.branchid, branchname, address, proname, proimage, quantity, totalprice, proqty 
+                                                from product a, branch b, orders c, orderdetail d 
+                                                where a.branchid=b.branchid and a.proid = d.proid and c.orderid = d.orderid 
+                                                    and date_part('month', orderdate ) = '$month' and b.branchid = '$store'");
                     if (!$result) {
                         printf("Error: %s\n", pg_errormessage($conn));
                         exit();
@@ -96,15 +95,14 @@ function bind_Store_List($conn) {
         ?>
         <tr>
             <td ><?php echo $No; ?></td>
-            <td ><?php echo $row['store_id']; ?></td>
-            <td><?php echo $row['store_name']; ?></td>
-            <td ><?php echo $row['detail_address']; ?></td>
-            <td><?php echo $row['pro_name']; ?></td>
-            <td align='center'><img src="product_image/<?php echo $row['image']?>" border='0' width="50" height="50" /></td>
+            <td ><?php echo $row['branchid']; ?></td>
+            <td><?php echo $row['branchname']; ?></td>
+            <td ><?php echo $row['address']; ?></td>
+            <td><?php echo $row['proname']; ?></td>
+            <td align='center'><img src="product_image/<?php echo $row['proimage']?>" border='0' width="50" height="50" /></td>
             <td><?php echo $row['quantity']; ?></td>
             <td>$ <?php echo number_format($row['totalprice']); ?></td>
-            <td><?php echo $row['pro_qty']; ?></td>
-            
+            <td><?php echo $row['proqty']; ?></td>
         </tr>
             
         <?php
