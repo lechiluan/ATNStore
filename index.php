@@ -75,7 +75,8 @@ $cart = (isset($_SESSION['cart'])) ? $_SESSION['cart'] : [];
                             <li><a href="?page=seeorder">Orders Management</a></li>
                             <li><a href="?page=seeorderdetail">Order Detail Management</a></li>
                             <li><a href="?page=seeuser">Customer Management</a></li>
-                            <li><a href="?page=revenue">Revenue Management</a></li>
+                            <li><a href="?page=revenue">Revenue Management by branch</a></li>
+                            <li><a href="?page=reven">Revenue Management by month</a></li>
                         </ul>
                     </li>
                     <?php
@@ -208,6 +209,10 @@ $cart = (isset($_SESSION['cart'])) ? $_SESSION['cart'] : [];
         else if($page == "revenue")
         {
             include_once("Management_Revenue.php");
+        }
+        else if($page == "reven")
+        {
+            include_once("manage_revenue.php");
         }
     } else {
         include_once("HomePage.php");
