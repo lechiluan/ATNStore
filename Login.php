@@ -17,8 +17,9 @@
     if(isset($_POST['btnLogin']))
     {   
         $us = $_POST['txtUsername'];
-        $us = pg_escape_string($conn,$us);
+        //$us = pg_escape_string($conn,$us);
         $pa = $_POST['txtPass'];
+        //$pa = pg_escape_string($conn,$pa);
         $err="";
         if($us == "")
         {
