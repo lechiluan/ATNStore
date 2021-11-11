@@ -25,7 +25,7 @@
 			}
 			else
 			{
-				$id = htmlspecialchars(pg_escape_string($conn,$id));
+				$id = (pg_escape_string($conn,$id));
 				$name = htmlspecialchars(pg_escape_string($conn,$name));
 				$des = htmlspecialchars(pg_escape_string($conn,$des));
 				$sq="SELECT * FROM category where catid='$id' or catname='$name'";
