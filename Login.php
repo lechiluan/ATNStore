@@ -19,7 +19,6 @@
         $us = $_POST['txtUsername'];
         $us = pg_escape_string($conn,$us);
         $pa = $_POST['txtPass'];
-        $us = pg_escape_string($conn,$pa);
         $err="";
         if($us == "")
         {
