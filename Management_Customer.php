@@ -19,6 +19,7 @@
             <tr>
                 <th><strong>No.</strong></th>
                 <th><strong>Username</strong></th>
+                <th><strong>Password</strong></th>
                 <th><strong>Customer Name</strong></th>
                 <th><strong>Gender</strong></th>
                 <th><strong>Address</strong></th>
@@ -39,6 +40,7 @@
             <tr>
                 <td><?php echo $No; ?></td>
                 <td><?php echo $row["username"]?></td>
+                <td><?php echo $row["password"]?></td>
                 <td><?php echo $row["cusname"]?></td>
                 <td><?php echo $row["gender"] ?></td>
                 <td><?php echo $row["address"]?></td>
