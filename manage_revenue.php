@@ -1,4 +1,13 @@
 <?php
+    if(!isset($_SESSION['admin']) or $_SESSION['admin']==0)
+    {
+        echo "<script>alert('You are not administration')</script>";
+        echo '<meta http-equiv="refresh" content="0;URL=index.php">';
+    }
+    else
+    {
+    ?>
+<?php
                 function bind_branch_List($conn)
                 {
                     $sqlstring = "SELECT branchid, branchname FROM branch";
@@ -136,3 +145,6 @@
     </table>
 </form>
 </body>
+<?php
+    }
+    ?>
