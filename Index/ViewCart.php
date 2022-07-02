@@ -54,7 +54,7 @@ function deleteConfirm() {
             <td align='center' class='cotNutChucNang'>
                 <img src='product-imgs/<?php echo $value['image'] ?>' border='0' width="100" height="100" />
             </td>
-            <form method="GET" action="Index/CartFunction.php">
+            <form method="GET" action="index?page=cartfunction">
                 <td>
                     <input type="hidden" name="action" value="update">
                     <input type="hidden" name='ma' value="<?php echo $value['id'] ?>">
