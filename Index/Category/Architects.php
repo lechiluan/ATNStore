@@ -19,7 +19,7 @@
             </h4>
             <div class="price"><ins>$<?php echo  $row['price']?></ins> <del class="oldprice">
                     $<?php echo  $row['oldprice']?></del></div>
-            <p><button><a href="CartFuntion.php?ma=<?php echo  $row['proid']?>">Add to Cart</a></button></p>
+            <p><button><a href="?page=cartfunction&&ma=<?php echo  $row['proid']?>">Add to Cart</a></button></p>
         </div>
     </div>
     <?php

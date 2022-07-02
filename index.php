@@ -122,6 +122,10 @@ if (isset($_GET['page'])) {
     {
         include_once("Manage_Revenue.php");
     }
+    else if($page == "cartfunction")
+    {
+        include_once("Index/CartFunction.php");
+    }
 } 
 else {
     include_once("Index/HomePage.php");
