@@ -122,7 +122,7 @@ if (isset($_GET['page'])) {
     }
     else if($page == "cartfunction")
     {
-        include_once("CartFunction.php");
+        include_once("/Index/CartFunction.php");
     }
 } 
 else {
