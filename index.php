@@ -1,5 +1,5 @@
-include_once("Index/Header.php");
 <?php
+include_once("Index/Header.php");
 session_start();
 include_once("Connection.php");
 if (!isset($_SESSION['cart'])) {
