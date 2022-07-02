@@ -20,22 +20,22 @@ if (isset($_GET['page'])) {
         include_once("Index/Register.php");
     } 
     else if ($page == "product_management") {
-        include_once("Admin/Mageme_Product/Product_Management.php");
+        include_once("Admin/Manage_Product/Product_Management.php");
     } 
     else if ($page == "category_management") {
-        include_once("Admin/Mageme_Category/Management_Category.php");
+        include_once("Admin/Manage_Category/Management_Category.php");
     } 
     else if ($page == "add_category") {
-        include_once("Admin/Mageme_Category/Add_Category.php");
+        include_once("Admin/Manage_Category/Add_Category.php");
     } 
     else if ($page == "update_category") {
-        include_once("Admin/Mageme_Category/Update_Category.php");
+        include_once("Admin/Manage_Category/Update_Category.php");
     } 
     else if ($page == "add_product") {
-        include_once("Admin/Mageme_Product/Add_Product.php");
+        include_once("Admin/Manage_Product/Add_Product.php");
     } 
     else if ($page == "update_product") {
-        include_once("Admin/Mageme_Product/Update_Product.php");
+        include_once("Admin/Manage_Product/Update_Product.php");
     } 
     else if ($page == "aboutus") {
         include_once("Index/AboutUs.php");
