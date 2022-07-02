@@ -54,7 +54,7 @@ function deleteConfirm() {
             <td align='center' class='cotNutChucNang'>
                 <img src='product-imgs/<?php echo $value['image'] ?>' border='0' width="100" height="100" />
             </td>
-            <form method="GET" action="CartFuntion.php">
+            <form method="GET" action="Index/CartFunction.php">
                 <td>
                     <input type="hidden" name="action" value="update">
                     <input type="hidden" name='ma' value="<?php echo $value['id'] ?>">
@@ -66,7 +66,7 @@ function deleteConfirm() {
             <td>$<?php echo $value['price']*$value['quantity']?>
             </td>
             <td align='center' class='cotNutChucNang'>
-                <a href="CartFuntion.php?ma=<?php echo $value['id'] ?>&action=delete" onclick="return deleteConfirm()">
+                <a href="Index/CartFunction.php?ma=<?php echo $value['id'] ?>&action=delete" onclick="return deleteConfirm()">
                     <img src='images/delete.png' border='0' /></a>
             </td>
         </tr>
@@ -100,6 +100,6 @@ function deleteConfirm() {
     ?>
 <?php
     }
-    include_once("Payment.php");
-    include_once("Allproduct.php");
+    include_once("Index/Payment.php");
+    include_once("Index/Category/Allproduct.php");
  ?>

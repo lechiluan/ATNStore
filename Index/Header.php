@@ -72,7 +72,7 @@
                         ?>
                         <li><a href="?page=viewcart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
                                 (<?php echo count($cart) ?>)</a></li>
-                        <li><a href="?page=update_customer"><span class="glyphicon glyphicon-user"></span> Hi,
+                        <li><a href="?page=update_information"><span class="glyphicon glyphicon-user"></span> Hi,
                                 <?php echo $_SESSION['us'] ?></a></li>
                         <li><a href="?page=logout"><span class="glyphicon glyphicon-logout"></span> Log out</a></li>
                     <?php
