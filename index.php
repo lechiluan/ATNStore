@@ -20,7 +20,7 @@ if (isset($_GET['page'])) {
         include_once("Index/Register.php");
     } 
     else if ($page == "product_management") {
-        include_once("Admin/Manage_Product/Management_Product.php.php");
+        include_once("Admin/Manage_Product/Management_Product.php");
     } 
     else if ($page == "add_product") {
         include_once("Admin/Manage_Product/Add_Product.php");
