@@ -3,6 +3,7 @@
     text-align: center;
 }
 </style>
+
 <h1 class="contact"><b>CONTACT US</b></h1>
 <div class="contact">
     <iframe
@@ -23,8 +24,8 @@
                 Luanlcgcc19023@fpt.edu.vn</p></a>
         <p><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/chiluanIT/" target="_blank"></i>
                 &nbsp; Facebook</a></p>
-        <p><i class="fa fa-youtube-play"></i><a href="https://www.youtube.com/"
-                target="_blank"></i> &nbsp;Youtube</a></p>
+        <p><i class="fa fa-youtube-play"></i><a href="https://www.youtube.com/" target="_blank"></i> &nbsp;Youtube</a>
+        </p>
     </div>
 </div>
 </div>

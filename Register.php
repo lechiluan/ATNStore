@@ -76,6 +76,7 @@
     }
 }
 ?>
+
     <div class="container">
         <h2>Member Registration</h2>
         <h5>Please Enter Enough information</h5>

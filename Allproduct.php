@@ -22,6 +22,7 @@
             <p><button><a href="CartFuntion.php?ma=<?php echo  $row['proid']?>">Add to Cart</a></button></p>
         </div>
     </div>
+    
     <?php
 				}
 				?>
