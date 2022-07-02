@@ -11,7 +11,7 @@
         }
         while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
     ?>
-            <form method="GET" action="index.php?page=cartfunction">
+            <form method="GET" action="CartFunction.php">
                 <div class="col-sm-6">
                     <img src="product-imgs/<?php echo $row['proimage'] ?>" style="width:100%">
                 </div>
