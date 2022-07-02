@@ -90,15 +90,15 @@ if (isset($_GET['page'])) {
     }
     else if($page == "suppliers_management")
     {
-        include_once("Admin/Manage_Suppliers/Management_Suppliers.php");
+        include_once("Admin/Manage_Supplier/Management_Suppliers.php");
     }
     else if($page == "add_suppliers")
     {
-        include_once("Admin/Manage_Suppliers/Add_Suppliers.php");
+        include_once("Admin/Manage_Supplier/Add_Suppliers.php");
     }
     else if($page == "update_suppliers")
     {
-        include_once("Admin/Manage_Suppliers/Update_Suppliers.php");
+        include_once("Admin/Manage_Supplier/Update_Suppliers.php");
     }
     else if($page == "branch_management")
     {
