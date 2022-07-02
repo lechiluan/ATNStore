@@ -20,7 +20,13 @@ if (isset($_GET['page'])) {
         include_once("Index/Register.php");
     } 
     else if ($page == "product_management") {
-        include_once("Admin/Manage_Product/Product_Management.php");
+        include_once("Admin/Manage_Product/Management_Product.php.php");
+    } 
+    else if ($page == "add_product") {
+        include_once("Admin/Manage_Product/Add_Product.php");
+    } 
+    else if ($page == "update_product") {
+        include_once("Admin/Manage_Product/Update_Product.php");
     } 
     else if ($page == "category_management") {
         include_once("Admin/Manage_Category/Management_Category.php");
@@ -30,12 +36,6 @@ if (isset($_GET['page'])) {
     } 
     else if ($page == "update_category") {
         include_once("Admin/Manage_Category/Update_Category.php");
-    } 
-    else if ($page == "add_product") {
-        include_once("Admin/Manage_Product/Add_Product.php");
-    } 
-    else if ($page == "update_product") {
-        include_once("Admin/Manage_Product/Update_Product.php");
     } 
     else if ($page == "aboutus") {
         include_once("Index/AboutUs.php");
@@ -118,7 +118,7 @@ if (isset($_GET['page'])) {
     }
     else if($page == "reven")
     {
-        include_once("Manage_Revenue.php");
+        include_once("Admin/Manage_Revenue.php");
     }
     else if($page == "cartfunction")
     {
