@@ -66,7 +66,7 @@ function deleteConfirm() {
             <td>$<?php echo $value['price']*$value['quantity']?>
             </td>
             <td align='center' class='cotNutChucNang'>
-                <a href="index?page=cartfunction&&ma=<?php echo $value['id'] ?>&action=delete" onclick="return deleteConfirm()">
+                <a href="CartFunction.php&&ma=<?php echo $value['id'] ?>&action=delete" onclick="return deleteConfirm()">
                     <img src='images/delete.png' border='0' /></a>
             </td>
         </tr>
