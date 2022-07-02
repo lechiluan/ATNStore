@@ -122,7 +122,8 @@ if (isset($_GET['page'])) {
     {
         include_once("Manage_Revenue.php");
     }
-} else {
+} 
+else {
     include_once("Index/HomePage.php");
 }
 ?>

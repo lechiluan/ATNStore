@@ -1,8 +1,6 @@
-
-</script>
 <?php
-include_once("Science.php");
-include_once("Lego.php");
-include_once("Vehicles.php");
-include_once("Architects.php");
+include_once("Index/Category/Science.php");
+include_once("Index/Category/Lego.php");
+include_once("Index/Category/Vehicles.php");
+include_once("Index/Category/Architects.php");
 ?>
