@@ -71,7 +71,7 @@ if (isset($_GET['page'])) {
         include_once("Index/Update_Information.php");
     } 
     else if ($page == "viewcart") {
-        include_once("Index/ViewCart.php");
+        include_once("ViewCart.php");
     } 
     else if ($page == "payment") {
         include_once("Index/Payment.php");
