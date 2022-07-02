@@ -76,7 +76,7 @@ function deleteConfirm() {
                 <h3>TOTAL:</h3>
             </td>
             <td>
-                <h3 class="price"><b>$<?php echo Number_format($total_scores);?></b></h3>
+                <h3 class="price"><b>$<?php echo Number_format($total);?></b></h3>
             </td>
             <td></td>
         </tr>
