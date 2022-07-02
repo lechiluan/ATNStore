@@ -90,27 +90,27 @@ if (isset($_GET['page'])) {
     }
     else if($page == "suppliers_management")
     {
-        include_once("Admin/Mageme_Suppliers/Management_Suppliers.php");
+        include_once("Admin/Manage_Suppliers/Management_Suppliers.php");
     }
     else if($page == "add_suppliers")
     {
-        include_once("Admin/Mageme_Suppliers/Add_Suppliers.php");
+        include_once("Admin/Manage_Suppliers/Add_Suppliers.php");
     }
     else if($page == "update_suppliers")
     {
-        include_once("Admin/Mageme_Suppliers/Update_Suppliers.php");
+        include_once("Admin/Manage_Suppliers/Update_Suppliers.php");
     }
     else if($page == "branch_management")
     {
-        include_once("Admin/Mageme_Branch/Management_Branch.php");
+        include_once("Admin/Manage_Branch/Management_Branch.php");
     }
     else if($page == "add_branch")
     {
-        include_once("Admin/Mageme_Branch/Add_Branch.php");
+        include_once("Admin/Manage_Branch/Add_Branch.php");
     }
     else if($page == "update_branch")
     {
-        include_once("Admin/Mageme_Branch/Update_Branch.php");
+        include_once("Admin/Manage_Branch/Update_Branch.php");
     }
     else if($page == "revenue")
     {
