@@ -1,13 +1,11 @@
 <?php
-include_once("Index/Header.php");
 session_start();
 include_once("Connection.php");
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
-
 $cart = (isset($_SESSION['cart'])) ? $_SESSION['cart'] : [];
-
+include_once("Index/Header.php");
 ?>
 <?php
 if (isset($_GET['page'])) {
