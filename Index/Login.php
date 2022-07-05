@@ -85,4 +85,37 @@
             </div>
         </div>
     </form>
+    
+    <div class="row">
+        <div class="col-md-12">
+        <h1>From Login</h1>
+        <h3>Login to continue</h3>
+        <form id="form1" name="form1" method="POST">
+            <h2 align="center"><b>Wellcome to FPT Book. Sign In to Continue.</b></h2>
+                    <hr />
+                    <div class="form-group">
+                <label for="txtUsername" class="col-md-5 control-label">Username(*): </label>
+                <div class="col-md-7">
+                    <input type="text" name="txtUsername" id="txtUsername" class="form-control" placeholder="Username"
+                        value="" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="txtPass" class="col-md-5 control-label">Password(*): </label>
+                <div class="col-md-7">
+                    <input type="password" name="txtPass" id="txtPass" class="form-control" placeholder="Password"
+                        value="" />
+                    <br>
+                </div>
+            </div>
+            <div class="form-group">
+                        <div class="col-md-offset-5 col-md-7">
+                        <input type="submit" name="btnLogin" class="btn btn-primary" id="btnLogin" value="Login" />
+                        <input type="submit" name="btnCancel" class="btn btn-primary" id="btnLogin" value="Cancel" />
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
 </body>
