@@ -3,7 +3,7 @@
 
 <head>
     <title>ATN Store</title>
-    <link rel="shortcut icon" href="/images/logoGW.jpg" />
+    <link rel="shortcut icon" href="/images/logoATNHeader.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
