@@ -37,4 +37,4 @@
           </div>
       </div>
   </footer>
-  <p Align="center"><i><b>ATN Store ©2022 All rights reserved. Website design is developed by Le Chi Luan. 0386363677</b></i>
+  <p Align="center"><i><b>ATN Store ©2022 All rights reserved. Website design is developed by Le Chi Luan.</b></i>

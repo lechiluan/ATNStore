@@ -1,7 +1,6 @@
 <script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
 <?php
     include_once("Connection.php");
-    
     function bind_payment_List($conn)
     {
         $sqlstring = "SELECT paymentid, paymentname FROM payment";
@@ -13,7 +12,7 @@
         }
         echo "</select>";
     }
-
+    
     if(isset($_GET["btnCancel"]))
     {
         echo '<meta http-equiv="refresh" content="0;URL=index.php">';

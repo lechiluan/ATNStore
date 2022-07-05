@@ -1,5 +1,5 @@
 <?php
-//Get custmer information
+//Get customer information
 $query = "SELECT cusname, address, email, telephone
 FROM customer
 where username='".$_SESSION["us"]."'";

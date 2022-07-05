@@ -9,7 +9,7 @@
 ?>
 <h1>Branches Management</h1>
 <!-- Bootstrap -->
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="index.css" />
 <meta charset="utf-8" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script language="JavaScript">
