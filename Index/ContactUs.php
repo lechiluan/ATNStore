@@ -1,3 +1,9 @@
+<style>
+.contact {
+    text-align: center;
+}
+</style>
+
 <h1 class="contact"><b>CONTACT US</b></h1>
 <div class="contact">
     <iframe

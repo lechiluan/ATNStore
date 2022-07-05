@@ -10,7 +10,7 @@
 
 <!-- Bootstrap -->
 <h1>Customer Management</h1>
-<link rel="stylesheet" type="text/css" href="index.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <meta charset="utf-8" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <form name="frm" method="post" action="">

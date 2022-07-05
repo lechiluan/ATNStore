@@ -52,9 +52,12 @@
         }
     }
 ?>
-    <h1>Login</h1>
+
+    <h1>From Login</h1>
     <h3>Login to continue</h3>
+    
     <form id="form1" name="form1" method="POST">
+
         <div class="row">
             <div class="form-group">
                 <label for="txtUsername" class="col-sm-2 control-label">Username(*): </label>
@@ -63,6 +66,7 @@
                         value="" />
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="txtPass" class="col-sm-2 control-label">Password(*): </label>
                 <div class="col-sm-10">
