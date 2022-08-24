@@ -1,3 +1,4 @@
+<!-- Check user must login then can access -->
 <?php
     include_once("Connection.php"); 
     if(!isset($_SESSION['admin']))
